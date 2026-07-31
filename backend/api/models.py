@@ -103,6 +103,7 @@ class Certification(models.Model):
     title = models.CharField(max_length=200)
     issuer = models.CharField(max_length=150)
     duration = models.CharField(max_length=50, blank=True, help_text='Optional, e.g. "19.5h"')
+    certificate_url = models.URLField(blank=True, default='')
     order = models.PositiveIntegerField(default=0)
        
     class Meta:
