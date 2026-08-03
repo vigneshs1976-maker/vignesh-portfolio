@@ -52,7 +52,8 @@ class EducationSerializer(serializers.ModelSerializer):
 class CertificationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Certification
-        fields = ['id', 'title', 'issuer', 'duration']
+        fields = ['id', 'title', 'issuer', 'duration', 'certificate_url']
+        
 
 
 class ContactMessageSerializer(serializers.ModelSerializer):
