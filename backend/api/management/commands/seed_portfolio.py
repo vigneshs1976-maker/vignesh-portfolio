@@ -28,8 +28,7 @@ class Command(BaseCommand):
                 role='Full Stack Web Developer',
                 eyebrow='// full-stack developer',
                 pitch=(
-                    'I build secure, full-stack web applications — and occasionally '
-                    'teach machines to catch a fake voice.'
+                    'I build secure, full-stack web applications with Django, React.js, and MySQL,'
                 ),
                 status='open_to_work',
                 location='Hyderabad, India',
@@ -41,19 +40,20 @@ class Command(BaseCommand):
                 linkedin_url='https://linkedin.com/in/vignesh-soma-75b3a8298',
                 github_url='https://github.com/vigneshs1976-maker',
                 about=[
-                    "I'm a final-year B.Tech student in Artificial Intelligence and Data "
-                    "Science at Vignan Institute of Technology and Science, Hyderabad, "
-                    "graduating in April 2026. Alongside my degree, I completed structured "
-                    "full-stack training at Teks Academy, where I built production-style web "
-                    "applications using Python, Django, React.js, and MySQL.",
+                    "I'm Vignesh Soma, a B.Tech graduate in Artificial Intelligence and Data Science (April 2026),"
+" now starting my career as a Full Stack Web Developer. I'm early in my professional journey — but I've spent the last year building a solid,"
+ "practical foundation through structured training,"
+" hands-on projects, and a habit of learning by doing rather than just studying theory.",
 
-                    "I care about clean, secure code — REST APIs with proper authentication, "
-                    "databases that scale, and interfaces that feel effortless to use. When a "
-                    "problem calls for it, I bring in machine learning too, like the real-time "
-                    "deepfake audio detector I built using MFCC features and an LSTM network.",
+"Alongside my degree, I completed dedicated full-stack training in Python, Django, React.js,"
+ "and MySQL, and added several self-driven certifications to round out what my coursework didn't cover."
+ "I've put that learning into real, working projects — a diary application with secure JWT-based authentication"
+ "and real-time saving, and a deforestation-detection system that uses computer vision to flag environmental changes from satellite imagery —"
+ "because I wanted proof, for myself and for anyone reviewing my work, that I can carry an idea through to finished software.",
 
-                    "Right now, I'm looking for a Full Stack Web Developer role at a product "
-                    "or service-based company where I can keep building and keep learning.",
+"I'm now looking for a fresher or entry-level opportunity where I can keep learning from experienced developers while contributing real value from day one."
+ "I pick things up quickly, I ask questions when I don't know something,"
+ "and I'd rather build something imperfect and improve it than wait until I feel completely ready.",
                 ],
             )
         )
@@ -76,9 +76,8 @@ class Command(BaseCommand):
             ('Frontend', ['React.js', 'HTML5', 'CSS3', 'Responsive Design'], 2),
             ('Backend', ['Django', 'REST APIs', 'JWT Authentication', 'MVC Architecture'], 3),
             ('Databases', ['SQL', 'MySQL'], 4),
-            ('AI / ML', ['MFCC Feature Extraction', 'LSTM', 'Streamlit', 'Speaker Verification'], 5),
-            ('Tools & VCS', ['Git', 'GitHub', 'VS Code'], 6),
-            ('Core Concepts', ['CRUD Operations', 'Data Privacy', 'Real-Time Systems'], 7),
+            ('Tools & VCS', ['Git', 'GitHub', 'VS Code'], 5),
+            ('Core Concepts', ['CRUD Operations', 'Data Privacy', 'Real-Time Systems'], 6),
         ]
         for name, skills, order in categories:
             SkillCategory.objects.update_or_create(
@@ -100,9 +99,27 @@ class Command(BaseCommand):
                     'Built a responsive, mobile-first UI in React.js for a smooth experience '
                     'across devices, enforcing data privacy at both the API and database layers.',
                 ],
-                github_url='https://github.com/vigneshs1976-maker',
+                github_url='',
                 order=1,
             ),
+            
+            dict(
+                title='Leveraging Machine learning to combat deforestation and preserve biodiversity',
+                tagline='AI-Powered Satellite Intelligence for Deforestation Detection.',
+                icon='leaf',
+                tech_stack=['Python', 'Django', 'TensorFlow', 'vision transformer', 'OpenCV', 'MySQL'],
+                 bullets=[
+                    "Designed and developed a scalable deforestation detection system using Python, Django, TensorFlow/Keras,"
+                     "and Vision Transformer (ViT) to identify deforestation patterns from satellite imagery.",
+                    "Integrated MySQL for user management and prediction history while implementing secure authentication," 
+                    "image upload, and real-time inference through a responsive Django web interface.",
+                    "Built an automated preprocessing and prediction pipeline using OpenCV,"
+                    "achieving reliable multi-label classification of satellite images and providing actionable insights through visualization dashboards.",
+                            ],
+                            github_url='',
+                            order=2,
+                        ),
+            
             dict(
                 title='AI-Powered Real-Time Deepfake Audio Detection',
                 tagline='Catching AI-generated voices with MFCC features and an LSTM classifier.',
@@ -117,8 +134,8 @@ class Command(BaseCommand):
                     'Enabled robust speaker verification by comparing voice embeddings against '
                     'stored profiles, reducing false-acceptance rates for AI-synthesized audio.',
                 ],
-                github_url='https://github.com/vigneshs1976-maker',
-                order=2,
+                github_url='',
+                order=3,
             ),
         ]
         for p in projects:
@@ -148,7 +165,7 @@ class Command(BaseCommand):
             dict(
                 degree='B.Tech, Artificial Intelligence and Data Science',
                 institution='Vignan Institute of Technology and Science, Hyderabad',
-                date_range='Nov 2023 — Apr 2026',
+                date_range='Sept 2023 — Apr 2026',
                 cgpa='CGPA: 7.8 / 10.0',
                 order=1,
             ),
@@ -162,7 +179,7 @@ class Command(BaseCommand):
             dict(
                 degree='Secondary School Certificate (SSC)',
                 institution='Brilliant Grammar High School',
-                date_range='May 2020',
+                date_range='March 2020',
                 cgpa='CGPA: 10.0 / 10.0',
                 order=3,
             ),
