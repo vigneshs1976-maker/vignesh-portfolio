@@ -193,7 +193,7 @@ class Command(BaseCommand):
             dict(title='Python Essentials with Django', issuer='TASK — Telangana Academy for Skill & Knowledge', duration='', certificate_url='', order=2),
             dict(title='Frontend Development with HTML5 & CSS3', issuer='TASK — Telangana Academy for Skill & Knowledge', duration='', certificate_url='', order=3),
             dict(title='Become a Full Stack Web Developer: Beginner to Advanced', issuer='Udemy', duration='19.5h', certificate_url='', order=4),
-            dict(title='Complete Web Developer Bootcamp: Beginner to Advanced', issuer='Udemy', duration='41h', certificate_url='', order=5),
+            dict(title='Complete Web Developer Bootcamp: Beginner to Advanced', issuer='Udemy', duration='41h', certificate_url='https://www.udemy.com/certificate/UC-5feee187-a4c6-496a-919d-53cd8e20caec/', order=5),
             dict(title='Intro to Django for Web Development: A Crash Course', issuer='Udemy', duration='', certificate_url='', order=6),
         ]
         for c in certs:
