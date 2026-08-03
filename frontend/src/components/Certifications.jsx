@@ -1,5 +1,5 @@
 import RevealSection from './RevealSection';
-import { IconAward } from './icons';
+import { IconAward, IconExternal } from './icons';
 
 export default function Certifications({ certifications }) {
   return (
@@ -14,7 +14,19 @@ export default function Certifications({ certifications }) {
                 <IconAward />
               </span>
               <span className="cert-text">
-                <span className="cert-title">{cert.title}</span>
+                {cert.certificate_url ? (
+                  
+                    className="cert-title cert-title-link"
+                    href={cert.certificate_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {cert.title}
+                    <IconExternal />
+                  </a>
+                ) : (
+                  <span className="cert-title">{cert.title}</span>
+                )}
                 <span className="cert-issuer">{cert.issuer}</span>
               </span>
               {cert.duration && <span className="cert-duration">{cert.duration}</span>}

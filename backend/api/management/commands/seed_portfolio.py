@@ -189,12 +189,12 @@ class Command(BaseCommand):
 
     def seed_certifications(self):
         certs = [
-            dict(title='Full Stack Web Development Using Python', issuer='Teks Academy', duration='', order=1),
-            dict(title='Python Essentials with Django', issuer='TASK — Telangana Academy for Skill & Knowledge', duration='', order=2),
-            dict(title='Frontend Development with HTML5 & CSS3', issuer='TASK — Telangana Academy for Skill & Knowledge', duration='', order=3),
-            dict(title='Become a Full Stack Web Developer: Beginner to Advanced', issuer='Udemy', duration='19.5h', order=4),
-            dict(title='Complete Web Developer Bootcamp: Beginner to Advanced', issuer='Udemy', duration='41h', order=5),
-            dict(title='Intro to Django for Web Development: A Crash Course', issuer='Udemy', duration='', order=6),
+            dict(title='Full Stack Web Development Using Python', issuer='Teks Academy', duration='', certificate_url='', order=1),
+            dict(title='Python Essentials with Django', issuer='TASK — Telangana Academy for Skill & Knowledge', duration='', certificate_url='', order=2),
+            dict(title='Frontend Development with HTML5 & CSS3', issuer='TASK — Telangana Academy for Skill & Knowledge', duration='', certificate_url='', order=3),
+            dict(title='Become a Full Stack Web Developer: Beginner to Advanced', issuer='Udemy', duration='19.5h', certificate_url='', order=4),
+            dict(title='Complete Web Developer Bootcamp: Beginner to Advanced', issuer='Udemy', duration='41h', certificate_url='', order=5),
+            dict(title='Intro to Django for Web Development: A Crash Course', issuer='Udemy', duration='', certificate_url='', order=6),
         ]
         for c in certs:
             Certification.objects.update_or_create(title=c['title'], defaults=c)
