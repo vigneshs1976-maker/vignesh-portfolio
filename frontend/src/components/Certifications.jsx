@@ -15,15 +15,16 @@ export default function Certifications({ certifications }) {
               </span>
               <span className="cert-text">
                 {cert.certificate_url ? (
-  
+                  <a
                     className="cert-title cert-title-link"
                     href={cert.certificate_url}
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                  >
                     {cert.title}
                     <IconExternal />
                   </a>
-               ) : (
+                ) : (
                   <span className="cert-title">{cert.title}</span>
                 )}
                 <span className="cert-issuer">{cert.issuer}</span>
